@@ -14,7 +14,7 @@ function Home() {
         if(Authstatus){
             appwriteService.getPosts().then((posts) => {
                 if (posts) {
-                    console.log(posts)
+                    // console.log(posts)
                     //filter posts to only show users posts
                     const userPosts = posts.documents.filter((post) => post.userId === userData.$id);
                     setPosts(userPosts);
